@@ -32,7 +32,7 @@ from shutil import copyfile
 from nnunet.training.data_augmentation.data_augmentation_moreDA import get_moreDA_augmentation
 from nnunet.training.loss_functions.deep_supervision import MultipleOutputLoss2, MultOut_SameTarget_Loss
 from nnunet.utilities.to_torch import maybe_to_torch, to_cuda
-from nnunet.network_architecture.generic_UNet_encoder import Generic_UNet_encoder
+from nnunet.network_architecture.generic_UNet_pre import Generic_UNet_pre
 from nnunet.network_architecture.initialization import InitWeights_He
 from nnunet.network_architecture.neural_network import SegmentationNetwork
 from nnunet.training.data_augmentation.default_data_augmentation import default_2D_augmentation_params, \
@@ -365,7 +365,7 @@ class nnUNetTrainerSSL(nnUNetTrainer):
         dropout_op_kwargs = {'p': 0, 'inplace': True}
         net_nonlin = nn.LeakyReLU
         net_nonlin_kwargs = {'negative_slope': 1e-2, 'inplace': True}
-        self.backbone= Generic_UNet_encoder(self.num_input_channels, self.base_num_features, self.num_classes,
+        self.backbone= Generic_UNet_pre(self.num_input_channels, self.base_num_features, self.num_classes,
                                     len(self.net_num_pool_op_kernel_sizes),
                                     self.conv_per_stage, 2, conv_op, norm_op, norm_op_kwargs, dropout_op,
                                     dropout_op_kwargs,
