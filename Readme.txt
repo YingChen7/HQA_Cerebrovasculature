@@ -130,7 +130,8 @@ Installation guide:
 
 Demo
 
-A subset consisting of 2 paired T1-MRA volumes was used in following running example to show the procedure of extracting features (i.e. cortical and vascular volumes). Notably, before running this pipeline, files with .nii.gz format should be converted to .nii format first. 
+A subset consisting of 2 paired T1-MRA volumes was used in following running example to show the procedure of extracting features (i.e. cortical and vascular volumes). 
+Notably, before running this pipeline, files with .nii.gz format should be converted to .nii format first. 
 
 Please run following scripts sequentially:
 1. Preprocessing
