@@ -5,7 +5,7 @@ library(gridExtra)
 dir_ <- ''
 setwd(dir_)
 
-health_brodmann_file <- "./data/subj_arterial_brodmann_params_IXIOAS07.csv" # brodmann atlas parameters
+health_brodmann_file <- "./data/healthy_vascular_brodmann.csv" # brodmann atlas parameters
 health_brodmann_all <- read.csv(file = health_brodmann_file)
 health_brodmann_all$sex <- factor(health_brodmann_all$sex, levels = c(1, 2), labels = c("male", "female"))
 
