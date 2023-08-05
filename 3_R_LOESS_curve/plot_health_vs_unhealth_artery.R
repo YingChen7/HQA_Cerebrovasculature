@@ -7,14 +7,14 @@ library(DMwR)
 dir_ <- 'D:\\Ying_Projects\\cerebrovascular_segmentation\\data_and_plots\\plots_code'
 setwd(dir_)
 
-ad_params_files = c("./data/subj_arterial_whole_params_dementia.csv",
-                    "./data/subj_arterial_willis_params_dementia.csv",
-                    "./data/subj_arterial_arteratlas_params_dementia.csv")  # dementia parameter files 
-health_params_files = c("./data/subj_arterial_whole_params_IXIOAS07.csv",
-                        "./data/subj_arterial_willis_params_IXIOAS07.csv",
-                        "./data/subj_arterial_arteratlas_params_IXIOAS07.csv") # health subjects parameter files
+ad_params_files = c("./data/AD_vascular_whole.csv",
+                    "./data/AD_vascular_cow.csv",
+                    "./data/AD_vascular_lobes.csv")  # dementia parameter files 
+health_params_files = c("./data/healthy_vascular_whole.csv",
+                        "./data/healthy_vascular_cow.csv",
+                        "./data/healthy_vascular_lobes.csv") # health subjects parameter files
 
-## health vs ad: cortical volume curves of whole brain
+## health vs ad: arterial volume curves of whole brain
 params_type_id = 1
 ad_params_file <- ad_params_files[params_type_id]
 ad_params <- read.csv(file = ad_params_file)
@@ -58,7 +58,7 @@ p<-ggplot()+
 dev.new(width = 11, height = 10, unit = "in", noRStudioGD = TRUE)
 p
 
-## health vs ad: cortical volume curves of four regions: willis
+## health vs ad: arterial volume curves of four regions: cow
 params_type_id = 2
 ad_params_file <- ad_params_files[params_type_id]
 ad_params <- read.csv(file = ad_params_file)
@@ -102,7 +102,7 @@ p<-ggplot()+
 dev.new(width = 11, height = 10, unit = "in", noRStudioGD = TRUE)
 p
 
-## health vs ad: cortical volume curves of four regions: ACA
+## health vs ad: arterial volume curves of four regions: ACA
 params_type_id = 3
 ad_params_file <- ad_params_files[params_type_id]
 ad_params <- read.csv(file = ad_params_file)
@@ -145,7 +145,7 @@ p<-ggplot()+
 dev.new(width = 11, height = 10, unit = "in", noRStudioGD = TRUE)
 p
 
-## health vs ad: cortical volume curves of four regions: MCA
+## health vs ad: arterial volume curves of four regions: MCA
 params_type_id = 3
 ad_params_file <- ad_params_files[params_type_id]
 ad_params <- read.csv(file = ad_params_file)
@@ -187,7 +187,7 @@ p<-ggplot()+
 dev.new(width = 11, height = 10, unit = "in", noRStudioGD = TRUE)
 p
 
-## health vs ad: cortical volume curves of four regions: PCA
+## health vs ad: arterial volume curves of four regions: PCA
 params_type_id = 3
 ad_params_file <- ad_params_files[params_type_id]
 ad_params <- read.csv(file = ad_params_file)
