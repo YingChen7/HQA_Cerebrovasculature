@@ -126,7 +126,7 @@ Installation guide:
 		* done!
 5. folders including utils and spmutils should be added to the default search path of Matlab.
 
-The estimated time of installation is one hour.
+The estimated time of installation is about one hour.
 ------------------------------------
 
 Demo
@@ -193,7 +193,7 @@ Here we include files recording hierarchical cortical and vascular volumes. To b
 
 Please refer to the 4_R_LOESS_curve folder for details. 
 
-The estimated time of running this demo is one hour.
+The estimated time of running this demo is about one hour.
 ------------------------------------
 
 Instructions for use:
