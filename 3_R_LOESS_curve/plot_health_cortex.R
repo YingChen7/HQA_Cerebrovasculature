@@ -4,14 +4,14 @@ library(gridExtra)
 ### set dir_ as the code file path
 dir_ <- ''
 setwd(dir_)
-health_vaswhole_file <- "./data/subj_cortical_whole_params_IXIOAS07.csv"
+health_vaswhole_file <- "./data/healthy_cortical_whole.csv"
 health_vaswhole_all <- read.csv(file = health_vaswhole_file) # whole brain parameters
 
-health_willis_file <- "./data/subj_cortical_willis_params_IXIOAS07.csv"
-health_willis_all <- read.csv(file = health_willis_file) # four main arterial regions-willis
+health_willis_file <- "./data/healthy_cortical_cow.csv"
+health_willis_all <- read.csv(file = health_willis_file) # four main arterial regions-Cow
 
-health_arterAL_file <- "./data/subj_cortical_arteratlas_params_IXIOAS07.csv"
-health_arterAL_all <- read.csv(file = health_arterAL_file) # four main arterial regions-the rest three
+health_arterAL_file <- "./data/healthy_cortical_lobes.csv"
+health_arterAL_all <- read.csv(file = health_arterAL_file) # four main arterial regions-lobes
 
 health_vaswhole_male <- health_vaswhole_all[health_vaswhole_all$sex==1,] # compute P values between male and female
 health_vaswhole_female <- health_vaswhole_all[health_vaswhole_all$sex==2,]
