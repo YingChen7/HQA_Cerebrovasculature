@@ -7,12 +7,12 @@ library(DMwR)
 dir_ <- ''
 setwd(dir_)
 
-ad_params_files = c("./data/subj_cortical_whole_params_dementia.csv",
-                     "./data/subj_cortical_willis_params_dementia.csv",
-                     "./data/subj_cortical_arteratlas_params_dementia.csv")  # dementia parameter files 
-health_params_files = c("./data/subj_cortical_whole_params_IXIOAS07.csv",
-                        "./data/subj_cortical_willis_params_IXIOAS07.csv",
-                        "./data/subj_cortical_arteratlas_params_IXIOAS07.csv") # health subjects parameter files
+ad_params_files = c("./data/AD_cortical_whole.csv",
+                     "./data/AD_cortical_cow.csv",
+                     "./data/AD_cortical_lobes.csv")  # dementia parameter files 
+health_params_files = c("./data/healthy_cortical_whole.csv",
+                        "./data/healthy_cortical_cow.csv",
+                        "./data/healthy_cortical_lobes.csv") # health subjects parameter files
 
 ## health vs ad: cortical volume curves of whole brain
 params_type_id = 1
@@ -59,7 +59,7 @@ dev.new(width = 11, height = 10, unit = "in", noRStudioGD = TRUE)
 p
 
 
-## health vs ad: cortical volume curves of four regions: willis
+## health vs ad: cortical volume curves of four regions: CoW
 params_type_id = 2
 ad_params_file <- ad_params_files[params_type_id]
 ad_params <- read.csv(file = ad_params_file)
