@@ -5,15 +5,15 @@ library(gridExtra)
 dir_ <- ''
 setwd(dir_)
 
-health_vaswhole_file <- "./data/subj_arterial_whole_params_IXIOAS07.csv"
+health_vaswhole_file <- "./data/healthy_vascular_whole.csv"
 health_vaswhole_all <- read.csv(file = health_vaswhole_file) # whole brain parameters
 
 # four main arterial regions
-health_willis_file <- "./data/subj_arterial_willis_params_IXIOAS07.csv"
-health_willis_all <- read.csv(file = health_willis_file) # four main arterial regions-willis
+health_willis_file <- "./data/healthy_vascular_cow.csv
+health_willis_all <- read.csv(file = health_willis_file) # four main arterial regions-CoW
 
-health_arterAL_file <- "./data/subj_arterial_arteratlas_params_IXIOAS07.csv"
-health_arterAL_all <- read.csv(file = health_arterAL_file) # four main arterial regions-the rest three
+health_arterAL_file <- "./data/healthy_vascular_lobes.csv"
+health_arterAL_all <- read.csv(file = health_arterAL_file) # four main arterial regions-lobes
 
 
 health_vaswhole_male <- health_vaswhole_all[health_vaswhole_all$sex==1,] # compute P values between male and female
@@ -67,7 +67,7 @@ p1<-ggplot(data=health_willis_all, mapping=aes(x=age, y=willis, color=sex, shape
   scale_x_continuous(limits = c(20, 80), expand = expand_scale(mult=c(0, 0), add=c(0, 0))) +
   scale_y_continuous(breaks = seq(500, 2500, by = 1000), expand = expand_scale(mult=c(0, 0), add=c(100, 100)))+
   xlab("Age")+
-  ylab(expression("Willis volume, mm"^"3"))+
+  ylab(expression("CoW volume, mm"^"3"))+
   theme_minimal()+
   theme(axis.line.x = element_line(color="black", size = 0.5),
         axis.line.y = element_line(color="black", size = 0.5),
