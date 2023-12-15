@@ -1,5 +1,5 @@
 # Step 1: Data preprocessing
-The first step is very important for the following analysis steps. Please follow our instructions of how to prepare your data.
+The first step is very important for the following analysis steps. Please follow our instructions to prepare your data.
 
 ## System requirements
 ##### Operating System
