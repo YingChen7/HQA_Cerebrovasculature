@@ -11,13 +11,13 @@ CPU with 4 cores and 8GB RAM are enough.
 
 ## Installation instructions
 1. Install R language:
-	* download R-4.3.1 (or higher version) installer for windows via this [link](https://cran.rstudio.com/).
-	* run the installer with default settings.
+	- download R-4.3.1 (or higher version) installer for windows via this [link](https://cran.rstudio.com/).
+	- run the installer with default settings.
 
 2. Install RStudio (to run R scripts):
-	* download RStudio installer via this [link](https://posit.co/download/rstudio-desktop/).
-	* run the installer with default settings.
-	* open RStudio and install packages in the console:  
+	- download RStudio installer via this [link](https://posit.co/download/rstudio-desktop/).
+	- run the installer with default settings.
+	- open RStudio and install packages in the console:  
 	   ```
       install.packages(c("ggplot2", "ggthemes","gridExtra", "stringr", "cowplot", "DMwR"))
       ```
@@ -30,15 +30,15 @@ Following previous Steps 1-3, you can extract hierarchical arterial and cortical
 2. In every R script, set the variable dir_ as PATH_you_save/4_R_LOESS_curve;
 3. (Optional) Default CSV files of arterial and cortical volumes are listed [here](./data/README.md). If you change these CSV file names, please also remember to change them in every R script.
 4. Run R scripts.  
-   * plot_health_artery.R:  
+   - plot_health_artery.R:  
   normative models of arterial volumes for healthy subjects regarding to the whole brain and the four typical regions of the brain (ACR, PCR, MCR, CoWR);
-   * plot_health_brodmann_artery.R:  
+   - plot_health_brodmann_artery.R:  
   normative models of arterial volumes for healthy subjects regarding to Brodmann areas;
-   * plot_health_cortex.R:  
+   - plot_health_cortex.R:  
   normative models of cortical volumes for healthy subjects regarding to the whole brain and the four typical regions of the brain; 
-   * plot_health_brodmann_cortex.R:  
+   - plot_health_brodmann_cortex.R:  
   normative models of cortical volumes for healthy subjects regarding to Brodmann areas;
-   * plot_health_vs_unhealth_artery.R: 
+   - plot_health_vs_unhealth_artery.R: 
   comparison between normative models of arterial volumes for healthy subjects and for AD subjects;
-   * plot_health_vs_unhealth_cortex.R:  
+   - plot_health_vs_unhealth_cortex.R:  
   comparison between normative models of cortical volumes for healthy subjects and for AD subjects.
