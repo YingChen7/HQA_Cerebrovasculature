@@ -2,10 +2,10 @@
 We compute locally estimated scatterplot smoothing (LOESS) in R to obtain normative models of arterial and cortical volumes of healthy subjects and subjects of diseases.
 
 ## System requirements
-##### Operating System
+### Operating System
 Windows.
 
-##### Hardware requirements
+### Hardware requirements
 CPU with 4 cores and 8GB RAM are enough. 
 
 
