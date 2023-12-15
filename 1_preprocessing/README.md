@@ -2,10 +2,10 @@
 The first step is very important for the following analysis steps. Please follow our instructions to prepare your data.
 
 ## System requirements
-##### Operating System
+### Operating System
 Windows.
 
-##### Hardware requirements
+### Hardware requirements
 CPU with 4 cores and 16GB RAM are enough. 
 
 
