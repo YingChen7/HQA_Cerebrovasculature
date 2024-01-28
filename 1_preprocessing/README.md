@@ -45,7 +45,7 @@ CPU with 4 cores and 16GB RAM are enough.
     │   ├──Subject0002-MRA.nii
     ├── ...
     ```
-2. Add [utils folder](../utils/) to the default search path of Matlab.
+2. Add [utils folder](../utils/)  and [spmutils folder](../spmutils/) to the default search path of Matlab.
 2. Run main_T1_preprocessing.m:  
 	To extract masks for grey matter, white matter, and cerebral spinal fluid, which help create deformation fields between individual and MNI space in [Step 3](../3_feature_extraction/README.md).
 
