@@ -3,7 +3,7 @@ The first step is very important for the following analysis steps. Please follow
 
 ## System requirements
 ### Operating System
-Windows.
+Windows 10.
 
 ### Hardware requirements
 CPU with 4 cores and 16GB RAM are enough. 
