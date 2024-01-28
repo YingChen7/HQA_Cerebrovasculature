@@ -85,7 +85,7 @@ GPU and CPU are required for model training and inference. For training, RTX 309
 	```
 4. Install Pytorch 
     ```  
-	pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu111
+	pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu111
 	conda install -c anaconda cudnn
 	conda install -c anaconda cudatoolkit
 	```
