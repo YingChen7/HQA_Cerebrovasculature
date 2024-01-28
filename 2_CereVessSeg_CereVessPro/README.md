@@ -89,23 +89,23 @@ GPU and CPU are required for model training and inference. For training, RTX 309
 	conda install -c anaconda cudnn
 	conda install -c anaconda cudatoolkit
 	```
-## How to run it? 
-   1. Download 2_CereVessSeg_CereVessPro folder to your device
-   2. Install CereVessSeg and CereVessPro
-   		```
+5. Download this 2_CereVessSeg_CereVessPro folder to your device, then install our CereVessSeg and CereVessPro
+   ```
 		cd Path_you_save/2_CereVessSeg_CereVessPro/CereVessSeg_CereVessPro_code
     	pip install -e .
-	    ``` 
-   3. Setting up paths as [nnUNet](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/set_environment_variables.md) where you intend to save raw data, preprocessed data and trained models. Please follow the instructions [here]( https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/setting_up_paths.md).
-   4. Download our trained models and then unzip. Here are two ways to get the trained models: [way1](https://pan.baidu.com/s/1v8X-hEaug5Jsawpra97Tcg?pwd=vhcq), 
+	    ```
+ 6. Setting up paths as [nnUNet](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/set_environment_variables.md) where you intend to save raw data, preprocessed data and trained models. Please follow the instructions [here]( https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/setting_up_paths.md).
+    
+## How to run it?    		
+   1. Download our trained models and then unzip. Here are two ways to get the trained models: [way1](https://pan.baidu.com/s/1v8X-hEaug5Jsawpra97Tcg?pwd=vhcq), 
    [way2](https://terabox.com/s/1V0DPKO9qrfQ6lkFvh3TJCA).
-   5. Put our trained models from ./netstore in the path you set for saving trained models.
-   6. Directly run segmentation inference by CereVessSeg:
+   2. Put our trained models from ./netstore in the path you set for saving trained models.
+   3. Directly run segmentation inference by CereVessSeg:
 		```
         cd PATH_you_save/2_CereVessSeg_CereVessPro/CereVessSeg_CereVessPro_code/nnunet/inference
         CUDA_VISIBLE_DEVICES=0 python predict_simple.py -i MRA_folder -o Pred_folder -t 503 -tr nnUNetTrainerMSV2 -m 3d_fullres -f 0 -p nnUNetPlansv2.1
         ```
-   7. Directly run inference by finetuned CereVessSeg that was pretrained by CereVessPro:
+   4. Directly run inference by finetuned CereVessSeg that was pretrained by CereVessPro:
     	```
    		cd Path_you_save/2_CereVessSeg_CereVessPro/CereVessSeg_CereVessPro_code/nnunet/inference
    		CUDA_VISIBLE_DEVICES=0 python predict_simple.py -i MRA_folder -o Pred_folder -t 503 -tr nnUNetTrainerSSLTune -m 3d_fullres -f 0 -p nnUNetPlansv2.1
