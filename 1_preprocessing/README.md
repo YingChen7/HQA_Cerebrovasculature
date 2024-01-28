@@ -29,7 +29,7 @@ CPU with 4 cores and 16GB RAM are enough.
 	* launch Matlab, add the directory of the unzipped file (along with its sub-folders) to the default search path of Matlab.
 
 ## How to run it?
-1. 	Organize the paired T1-MRA volumes the way we did (**!!Very important**). Suppose you got 1k pairs. It is suggested to name each T1 file as Subject+number-T1.nii, and the paired MRA file as project+number-MRA.nii. Then put these paired files in the [imgs folder](./imgs/) like this: 
+1. Organize the paired T1-MRA volumes the way we did (**!!Very important**). Suppose you got 1k pairs. It is suggested to name each T1 file as Subject+number-T1.nii, and the paired MRA file as project+number-MRA.nii. Then put these paired files in the [imgs folder](./imgs/) like this: 
     ```
     T1/
     ├── Subject0001/
@@ -45,8 +45,9 @@ CPU with 4 cores and 16GB RAM are enough.
     │   ├──Subject0002-MRA.nii
     ├── ...
     ```
-2. run main_T1_preprocessing.m:  
+2. Add [utils_folder](../utils/) to the default search path of Matlab.
+2. Run main_T1_preprocessing.m:  
 	To extract masks for grey matter, white matter, and cerebral spinal fluid, which help create deformation fields between individual and MNI space in [Step 3](../3_feature_extraction/README.md).
 
-3. run main_arrange_MRAfiles.m:  
+3. Run main_arrange_MRAfiles.m:  
 	This script will copy the original MRA file from each subject to a target direcroty ./imgs/rawMRAs, which can be input to the segmentation model.
