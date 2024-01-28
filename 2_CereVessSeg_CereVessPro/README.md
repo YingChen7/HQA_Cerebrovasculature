@@ -14,7 +14,7 @@ GPU and CPU are required for model training and inference. For training, RTX 309
          apt-get install wget
 	   wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
          ```  
-      or directly download the installer from [Anaconda](https://www.anaconda.com/download#downloads).
+      or directly download the installer from [Anaconda](https://www.anaconda.com/download#downloads) for linux.
 	* verify the hash code integrity of the package:  
 		`sha256sum Anaconda3-2023.09-0-Linux-x86_64.sh`
 	* run the Anaconda bash shell script:  
