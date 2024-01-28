@@ -5,18 +5,19 @@ and 3) conventional 82 Brodmann areas.
 
 ## System requirements
 ### Operating System
-Windows 11.
+Windows 10.
 
 ### Hardware requirements
 CPU with 4 cores and 16GB RAM are enough. 
 
 ## Installation instructions
-Install Matlab and third party packages SPM12, DPABI and NIFTI following the instructions in [Step 1](../1_preprocessing/README.md#installation-instructions), if you haven't installed them.
+1. Install Matlab and third party packages SPM12, DPABI and NIFTI following the instructions in [Step 1](../1_preprocessing/README.md#installation-instructions), if you haven't installed them.
+2. Download this 3_feature_extraction folder under the same directory of 1_preprocessing folder to your device.
 
 ## How to run it?
-1. Download this 3_feature_extraction folder to your device.
-2. Coregister raw MRA volumes (along with their prediction) to individual T1 space .
-   * set the variable `predfile_dir` to the `Pred_folder` used in [Step 3](../2_CereVessSeg_CereVessPro/README.md#how-to-run-it) for saving predicted segmentations in main_coreg_MRA_to_T1.m.   
+1. Copy the predicted MRA segmentations from the `Pred_folder` in [Step2](../2_CereVessSeg_CereVessPro/README.md#how-to-run-it) to current Windows device.
+2. Coregister raw MRA volumes (along with their prediction) to individual T1 space.
+   * set the variable `predfile_dir` to the directory for saving predicted segmentations in main_coreg_MRA_to_T1.m.   
    * run main_coreg_MRA_to_T1.m, the resulted every paired coregisterred MRA volume and segmentation will be saved in the corresponding [`./1_preprocessing/MRA/subjectXXXX` folder](../1_preprocessing/imgs/MRA/). And all resulted coregisterred MRA volumes will be further copied to a subfolder `./coregMRAs`.
    * copy all coregisterred MRA segmentations to a folder.
 
