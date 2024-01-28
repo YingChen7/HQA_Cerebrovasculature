@@ -28,7 +28,7 @@ health_params<-na.omit(health_params)
 
 lof_ad.scores <- lofactor(ad_params[,-c(3)],6)
 plot(density(lof_ad.scores))
-outliers_ad <- which(lof_ad.scores>1.3)
+outliers_ad <- which(lof_ad.scores>1.5)
 ad_params<-ad_params[-c(outliers_ad),]    # Remove outliers of dementia samples  
 
 t.test(ad_params$grey_whole, health_params$grey_whole)
@@ -73,7 +73,7 @@ health_params<-na.omit(health_params)
 
 lof_ad.scores <- lofactor(ad_params[,-c(3)],6)
 plot(density(lof_ad.scores))
-outliers_ad <- which(lof_ad.scores>1.5) # decide the thresholh based on the lof_ad.scores plot results
+outliers_ad <- which(lof_ad.scores>1.4) # decide the thresholh based on the lof_ad.scores plot results
 ad_params<-ad_params[-c(outliers_ad),]    # Remove outliers of dementia samples  
 
 t.test(ad_params$willis, health_params$willis)
@@ -81,11 +81,11 @@ p<-ggplot()+
   theme_classic() +
   geom_smooth(data=subset(health_params, age>20&age<90),
               mapping=aes(x=age, y=willis, group=sex, colour = sex),
-              level = 0.95, size=1, alpha=0.2, span=1)+
+              level = 0.95, size=1, alpha=0.2, span=1.3)+
   scale_color_manual(values = c("red","blue"))+
   geom_smooth(data=subset(ad_params, age>65 & age<80),
               mapping=aes(x=age, y=willis, group=sex, colour = sex),
-              linetype = "longdash", level = 0.95, size=1, alpha=0.2, span=1)+
+              linetype = "longdash", level = 0.95, size=1, alpha=0.2, span=1.3)+
   scale_x_continuous(expand = c(0, 0), breaks = seq(20, 90, 10), limits = c(20, 90)) +
   scale_y_continuous(breaks = seq(1000, 3000, by = 2000),expand = expand_scale(mult=c(0, 0), add=c(400, 400)))+
   xlab("Age")+
@@ -125,11 +125,11 @@ p<-ggplot()+
   theme_classic() +
   geom_smooth(data=subset(health_params, age>20&age<90),
               mapping=aes(x=age, y=ACA, group=sex, colour = sex),
-              level = 0.95, size=1.5, alpha=0.2, span=0.9)+
+              level = 0.95, size=1.5, alpha=0.2, span=1)+
   scale_color_manual(values = c("red","blue"))+
   geom_smooth(data=subset(ad_params, age>65 & age<80),
               mapping=aes(x=age, y=ACA, group=sex, colour = sex),
-              linetype = "longdash", level = 0.95, size=1.5, alpha=0.2, span=0.9)+
+              linetype = "longdash", level = 0.95, size=1.5, alpha=0.2, span=1)+
   scale_x_continuous(expand = c(0, 0), breaks = seq(20, 90, 10), limits = c(20, 90)) +
   scale_y_continuous(breaks = seq(40000, 70000, by = 10000),expand = expand_scale(mult=c(0, 0), add=c(100, 100)))+
   xlab("Age")+
