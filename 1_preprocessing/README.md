@@ -13,7 +13,7 @@ CPU with 4 cores and 16GB RAM are enough.
 1. Install [Matlab](https://www.mathworks.com/help/install/install-products.html), default setting is suitable during Matlab installation
 
 2. Install third party package SPM12 in Matlab
-	* download SPM12 zipfile via this [link](https://www.fil.ion.ucl.ac.uk/spm/download/restricted/eldorado/spm12.zip).If thers's no download window prompted up, go to this [website](https://www.fil.ion.ucl.ac.uk/spm/software/download/) and then choose to download SPM12 in the blank of "SPM version".
+	* download SPM12 zipfile via this [link](https://www.fil.ion.ucl.ac.uk/spm/download/restricted/eldorado/spm12.zip). If thers's no download window prompted up, go to this [website](https://www.fil.ion.ucl.ac.uk/spm/software/download/) and then choose to download SPM12 in the blank of "SPM version".
 			
 	* unzip SPM12 zipfile to any directory you want, wherein scripts are placed.
 	* launch Matlab, add the directory of the unzipped file (along with its sub-folders) to the default search path of Matlab.
@@ -46,7 +46,7 @@ CPU with 4 cores and 16GB RAM are enough.
     ├── ...
     ```
 2. run main_T1_preprocessing.m:  
-	To extract masks for grey matter, white matter, and cerebral spinal fluid, which help create deformation fields between individual and MNI space in Step 3.
+	To extract masks for grey matter, white matter, and cerebral spinal fluid, which help create deformation fields between individual and MNI space in [Step 3](../3_feature_extraction/README.md).
 
 3. run main_arrange_MRAfiles.m:  
 	This script will copy the original MRA file from each subject to a target direcroty ./imgs/rawMRAs, which can be input to the segmentation model.
