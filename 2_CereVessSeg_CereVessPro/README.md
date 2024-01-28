@@ -19,7 +19,7 @@ GPU and CPU are required for model training and inference. For training, RTX 309
 		`sha256sum Anaconda3-2023.09-0-Linux-x86_64.sh`
 	* run the Anaconda bash shell script:  
 		`bash Anaconda3-2023.09-0-Linux-x86_64.sh`
-	* after running the bash command, you’ll be welcomed to the Anaconda setup. However, you must review and agree to its license agreement before the installation. Hit Enter to continue. Type 'yes' when a question comes out (to use the default directory to place Anaconda)
+	* after running the bash command, you’ll be welcomed to the Anaconda setup. However, you must review and agree to its license agreement before the installation. Hit Enter to continue. Type 'yes' when a question comes out (to use the default directory to place Anaconda), until the installer finishes and displays “Thank you for installing Anaconda3”. Close and re-open your terminal window for the installation to take effect, or enter the command source ~/.bashrc to refresh the terminal.
 
 2. Install CUDA 11.1 or higher. Here we use CUDA 11.1 for example, which was used in our experiments:
 	* (optional) if you installed some old versions of CUDA before, it is better to remove previous installation：
