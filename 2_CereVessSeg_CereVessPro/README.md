@@ -90,10 +90,10 @@ GPU and CPU are required for model training and inference. For training, RTX 309
 	conda install -c anaconda cudatoolkit
 	```
 5. Download this 2_CereVessSeg_CereVessPro folder to your device, then install our CereVessSeg and CereVessPro
-   ```
-		cd Path_you_save/2_CereVessSeg_CereVessPro/CereVessSeg_CereVessPro_code
+     ```
+	cd Path_you_save/2_CereVessSeg_CereVessPro/CereVessSeg_CereVessPro_code
     	pip install -e .
-	    ```
+	```
  6. Setting up paths as [nnUNet](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/set_environment_variables.md) where you intend to save raw data, preprocessed data and trained models. Please follow the instructions [here]( https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/setting_up_paths.md).
     
 ## How to run it?    		
