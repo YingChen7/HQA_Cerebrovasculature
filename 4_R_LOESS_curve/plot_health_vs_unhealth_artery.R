@@ -4,7 +4,7 @@ library(gridExtra)
 library(cowplot)
 library(DMwR)
 ### set dir_ as the code file path
-dir_ <- 'D:\\Ying_Projects\\cerebrovascular_segmentation\\data_and_plots\\plots_code'
+dir_ <- ''
 setwd(dir_)
 
 ad_params_files = c("./data/AD_vascular_whole.csv",
@@ -28,7 +28,7 @@ health_params<-na.omit(health_params)
 
 lof_ad.scores <- lofactor(ad_params[,-c(3)],6)
 plot(density(lof_ad.scores))
-outliers_ad <- which(lof_ad.scores>1.5) # decide the threshold based on lof_ad plot
+outliers_ad <- which(lof_ad.scores>1.6) # decide the threshold based on lof_ad plot
 ad_params<-ad_params[-c(outliers_ad),]    # Remove outliers of dementia samples  
 
 t.test(ad_params$vas_whole, health_params$vas_whole)
