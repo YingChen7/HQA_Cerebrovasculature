@@ -100,13 +100,14 @@ GPU and CPU are required for model training and inference. For training, RTX 309
    1. Download our trained models and then unzip. Here are two ways to get the trained models: [way1](https://pan.baidu.com/s/1v8X-hEaug5Jsawpra97Tcg?pwd=vhcq), 
    [way2](https://terabox.com/s/1V0DPKO9qrfQ6lkFvh3TJCA).
    2. Put our trained models from ./netstore in the path you set for saving trained models.
-   3. Copy MRA files in rawMRAs folder from [Step 1](../1_preprocessing/imgs/) to current Linux device. You can also only CereVessSeg and CereVessPro for your own MRA data.  Here we provided two MRA files in the [MRA_data](./MRA_data) as examples along with their GT. 
-   4. Directly run segmentation inference by CereVessSeg:
+   3. Copy MRA files in rawMRAs folder from [Step 1](../1_preprocessing/imgs/) to current Linux device. You can also only CereVessSeg and CereVessPro for your own MRA data.  Here we provided two MRA files in the [MRA_data](./MRA_data) as examples along with their annotations. Please make sure every MRA file name ending with "_0000.nii.gz". 
+   5. Directly run segmentation inference by CereVessSeg:
 		```
         cd PATH_you_save/2_CereVessSeg_CereVessPro/CereVessSeg_CereVessPro_code/nnunet/inference
         CUDA_VISIBLE_DEVICES=0 python predict_simple.py -i MRA_folder -o Pred_folder -t 503 -tr nnUNetTrainerMSV2 -m 3d_fullres -f 0 -p nnUNetPlansv2.1
         ```
-   5. Directly run inference by finetuned CereVessSeg that was pretrained by CereVessPro:
+   Here `MRA_folder`  is the directory wherein MRA files are put, and `Pred_folder` is the directory wherein MRA segmentation results will be saved.
+   6. Directly run inference by finetuned CereVessSeg that was pretrained by CereVessPro:
     	```
    		cd Path_you_save/2_CereVessSeg_CereVessPro/CereVessSeg_CereVessPro_code/nnunet/inference
    		CUDA_VISIBLE_DEVICES=0 python predict_simple.py -i MRA_folder -o Pred_folder -t 503 -tr nnUNetTrainerSSLTune -m 3d_fullres -f 0 -p nnUNetPlansv2.1
