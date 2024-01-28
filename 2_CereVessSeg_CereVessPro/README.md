@@ -96,7 +96,7 @@ GPU and CPU are required for model training and inference. For training, RTX 309
 		cd Path_you_save/2_CereVessSeg_CereVessPro/CereVessSeg_CereVessPro_code
     	pip install -e .
 	    ``` 
-   3. Setting up paths as nnUNet where you intend to save raw data, preprocessed data and trained models. Please follow the instructions [here]( https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/setting_up_paths.md).
+   3. Setting up paths as [nnUNet](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/set_environment_variables.md) where you intend to save raw data, preprocessed data and trained models. Please follow the instructions [here]( https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/setting_up_paths.md).
    4. Download our trained models and then unzip. Here are two ways to get the trained models: [way1](https://pan.baidu.com/s/1v8X-hEaug5Jsawpra97Tcg?pwd=vhcq), 
    [way2](https://terabox.com/s/1V0DPKO9qrfQ6lkFvh3TJCA).
    5. Put our trained models from ./netstore in the path you set for saving trained models.
