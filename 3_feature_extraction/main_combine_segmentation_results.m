@@ -33,7 +33,7 @@ for i=1:length(subj_folders)
     nii=load_untouch_nii(coreg_predMRAfile);
     img1=nii.img;
     img2=load_untouch_nii(pred_coregMRAfile).img;
-    nii.img=img1+img2;
+    nii.img=double(img1)+double(img2);
     subj_outputdir=fullfile(outputdir, subj_folders{i});
     nc_make_sure_dir_exist(subj_outputdir);
     save_untouch_nii(nii, fullfile(subj_outputdir, [subj_folders{i}, '_segmentation.nii.gz']));

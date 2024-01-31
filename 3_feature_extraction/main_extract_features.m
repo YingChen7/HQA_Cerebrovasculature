@@ -11,6 +11,7 @@ gmthre=0.5;
 
 % define outputdir of csv files
 csv_outdir=nc_GetFullPath('../4_R_LOESS_curve/');
+mraseg_dir=nc_GetFullPath('./combined_results/');
 
 %% generate whole brain probability mask
 % first, transformed the coreg-MRA to MNI space
@@ -62,7 +63,6 @@ for isubj=3:length(subj_folders)
 end
 
 %% compute hierarchical cortical and vascular volumes
-mraseg_dir=nc_GetFullPath('./combined_results/');
 brodmann_img=load_nii(brodmann_atlas).img;
 brd_labels=unique(brodmann_img(:));
 voxelsize=0.5^3;

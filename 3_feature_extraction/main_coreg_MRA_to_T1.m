@@ -8,8 +8,12 @@ addpath(genpath(fullfile(pwd, 'spmutils/')));
 cd(tmp);
 
 % set the value to the Pred_folder set in step 2
-predfile_dir='C:\Users\ASUS\Desktop\gt\';
+predfile_dir='';
 predfile_suffix='.nii';
+% directory of coregisterred MRA files
+coreg_MRA_dir=nc_GetFullPath('../1_preprocessing/imgs/coregMRA/');
+nc_make_sure_dir_exist(coreg_MRA_dir);
+
 % coregister individual MRA volume (along with its prediction) to its 
 % paired T1 space but with spatial resolution of 0.5 * 0.5 * 0.5
 resliced_voxel=[0.5 0.5 0.5];
@@ -39,9 +43,6 @@ for i=1:length(mrapred_filelist)
     outfile=fullfile(group_mra_dir, subj_folders{i}, fname);
     save_untouch_nii(load_untouch_nii(fullfile(group_mrapred_dir, mrapred_filelist(i).name)), outfile);
 end
-
-coreg_MRA_dir=nc_GetFullPath('../1_preprocessing/imgs/coregMRA/');
-nc_make_sure_dir_exist(coreg_MRA_dir);
 
 coreg_matfile=fullfile(pwd, 'jobmats/Coregister_Estimate_Reslice.mat');
 resliced_c1_files=cell(1, length(subj_folders));
