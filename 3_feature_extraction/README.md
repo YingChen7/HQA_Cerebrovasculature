@@ -12,7 +12,7 @@ CPU with 4 cores and 16GB RAM are enough.
 
 ## Installation instructions
 1. Install Matlab and third party packages SPM12, DPABI and NIFTI following the instructions in [Step 1](../1_preprocessing/README.md#installation-instructions), if you haven't installed them.
-2. Download this 3_feature_extraction folder under the same directory as 1_preprocessing folder to your device.
+2. Download this 3_feature_extraction folder under the same directory as 1_preprocessing folder to your device, and also add [utils folder](../utils/)  and [spmutils folder](../spmutils/) to the default search path of Matlab.
 
 ## How to run it?
 1. Copy the predicted MRA segmentations from the `Pred_folder` in [Step2](../2_CereVessSeg_CereVessPro/README.md#how-to-run-it) to current Windows device.
