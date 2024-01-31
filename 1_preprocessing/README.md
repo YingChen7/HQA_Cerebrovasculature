@@ -27,7 +27,7 @@ CPU with 4 cores and 16GB RAM are enough.
 	* download NIFTI zipfile via this [link](https://ww2.mathworks.cn/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image)
 	* unzip NIFTI zipfile to any directory you want.
 	* launch Matlab, add the directory of the unzipped file (along with its sub-folders) to the default search path of Matlab.
-5. Download this 1_preprocessing folder to your device, and add [utils folder](../utils/)  and [spmutils folder](../spmutils/) to the default search path of Matlab.
+5. Download this 1_preprocessing folder, and [utils folder](../utils/), [spmutils folder](../spmutils/) to your device, and add [utils folder](../utils/)  and [spmutils folder](../spmutils/) to the default search path of Matlab.
 
 ## How to run it?
 1. Organize the paired T1-MRA volumes the way we did (**!!Very important**). Suppose you got 1k pairs. It is suggested to name each T1 file as Subject+number-T1.nii, and the paired MRA file as project+number-MRA.nii. Then put these paired files in the [imgs folder](./imgs/) like this: 
