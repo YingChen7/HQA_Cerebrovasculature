@@ -1,7 +1,14 @@
 clear all
 clc
+
+tmp=pwd;
+cd ..
+addpath(genpath(fullfile(pwd, 'utils/')));
+addpath(genpath(fullfile(pwd, 'spmutils/')));
+cd(tmp);
+
 % installed directory of spm: e.g. G:\guobin\spm12\
-SPMdir='C:\Program Files\MATLAB\spm12\'; 
+SPMdir='D:\spm12\'; 
 image_dir=fullfile(pwd, 'imgs');
 group_t1_dir=fullfile(image_dir, '/T1/');
 newseg_jobmatfile=fullfile(pwd, 'jobmats/NewSegment.mat'); 
@@ -12,18 +19,27 @@ folder_prefix='Subj';
 % prefix/suffix of corresponding T1 files
 file_prefix='Subj';
 file_suffix='.nii';
-% threshold to binarize individual gray matter mask
-gmthre=0.5;
+
 % sort the subject folders according to their names
 % this is the folder ranked in the first
 % wherein some critical files are saved
 first_subj_folder='Subject0001';
 
-%% resliced all T1 files to resolution space of 0.5 * 0.5 * 0.5 mm3
-resliced_voxel=[0.5 0.5 0.5];
+% convert to nii format if necessary
 subj_folders=nc_generate_folder_list(group_t1_dir, folder_prefix, 0);
 subj_t1files=cell(1, length(subj_folders));
 for isubj=1:length(subj_folders)
+    tmp=dir(fullfile(group_t1_dir, subj_folders{isubj}));
+    tmp(1:2)=[];
+    for itmp=1:length(tmp)
+        [~, ~, file_ext]=fileparts(tmp(itmp).name);
+        if strcmp(file_ext,'.gz')
+            infile=fullfile(group_t1_dir, subj_folders{isubj}, tmp(itmp).name);
+            outfile=fullfile(group_t1_dir, subj_folders{isubj}, tmp(itmp).name(1:end-3));
+            save_untouch_nii(load_untouch_nii(infile), outfile);
+        end
+    end
+
     subj_t1files{isubj}=nc_get_specific_file_path(fullfile(group_t1_dir, ...
         subj_folders{isubj}), file_prefix, file_suffix);
 end
