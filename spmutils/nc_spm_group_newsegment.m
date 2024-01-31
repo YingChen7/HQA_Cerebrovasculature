@@ -3,8 +3,8 @@ function nc_spm_group_newsegment(SPMFilePath, newseg_jobmatfile, subj_t1files)
 nsubj=length(subj_t1files);
 parfor i=1:nsubj
     [fpath, ~, ~]=fileparts(subj_t1files{i});
-    yfile=get_specific_file_path(fpath, 'y_', '');
-    if file_exist(yfile)
+    yfile=nc_get_specific_file_path(fpath, 'y_', '');
+    if exist(yfile, 'file') == 2
         continue
     end
     SPMJOB = load(newseg_jobmatfile); 
