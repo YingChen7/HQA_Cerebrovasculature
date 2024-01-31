@@ -15,7 +15,7 @@ for i=1:numel(folders)
     end
     for j=1:length(files)
         fname=fullfile(one_dir, files(j).name);
-        if file_exist(fname) == 1
+        if exist(fname, 'file') == 2
             fname=files(j).name;
 %             filelist{length(filelist)+1}=fname;
             filelist{length(filelist)+1}=fullfile(one_dir, files(j).name);

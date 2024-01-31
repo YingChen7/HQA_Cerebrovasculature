@@ -10,7 +10,7 @@ end
 if length(subj_folders)==0
     error('no valid subj folders');
 end
-if file_exist(out_file) && IsRegenrate ~= 1
+if exist(out_file, 'file') == 2 && IsRegenrate ~= 1
     nii=load_nii(out_file);
     result=nii.img;
     return;
@@ -28,7 +28,7 @@ for i=1:length(subj_folders)
     end
     
     reslice_output_file=fullfile(workdir, subj_folders(i).name, ['tmp_reslice_', tmp(1).name]);
-    wm_img=reslice_and_load_image(fullfile(workdir, subj_folders(i).name, tmp(1).name), ...
+    wm_img=nc_reslice_and_load_image(fullfile(workdir, subj_folders(i).name, tmp(1).name), ...
         reslice_output_file, sp_LR, sp_AP, sp_SI);
     if isempty(wm_nii)
         wm_nii=load_nii(reslice_output_file);

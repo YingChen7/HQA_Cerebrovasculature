@@ -6,7 +6,7 @@ end
 folder_list={};
 for i=1:length(tmps)
     pdir=fullfile(fromdir, tmps(i).name);
-    if dir_exist(pdir) == 1
+    if exist(pdir, 'dir') == 7
         if IsAbsoluteDir == 1
             folder_list{length(folder_list)+1}=pdir;
         else
