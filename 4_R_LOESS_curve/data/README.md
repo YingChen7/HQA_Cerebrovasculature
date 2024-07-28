@@ -1,6 +1,6 @@
 # Hierarchical arterial and cortical volume features of subjects
 
-Here we include CSV files recording hierarchical arterial and cortical volumes of healthy subjects and AD subjects. There are 963 healthy subjects and 147 AD subjects in our dataset. 
+Here we include CSV files recording hierarchical arterial and cortical volumes of UK healthy subjects, CN healthy subjects, CN subjects with cortical stroke, CN subjects with lacunar stroke and CN AD subjects.
 * healthy_vascular_whole.csv: whole-brain arterial volumes were recorded for healthy subjects;
 * healthy_vascular_brodmann.csv: arterial volumes for brodmann areas were recorded for healthy subjects;
 * healthy_vascular_lobes.csv: lobular arterial volumes were recorded for healthy subjects;
