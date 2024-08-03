@@ -22,18 +22,13 @@ CPU with 4 cores and 8GB RAM are enough.
 Following previous Steps 1-3, you can extract hierarchical arterial and cortical volumes by yourself using your own dataset. Then you can run our python notebooks to get the normative models of your data by following the below instruction. We also provide CSV files containing arterial and cortical volume features from healthy and pathological subjects in the [data folder](./data/), which you can use to reproduce normative models of our dataset or test.  
 1. Check if hierarchical arterial and cortical volumes of each individual are saved in CSV files in the folder 
    PATH_you_save/4_R_LOESS_curve/data;
-2. In every R script, set the variable `dir_` as PATH_you_save/4_R_LOESS_curve;
-3. (Optional) Default CSV files of arterial and cortical volumes are listed [here](./data/README.md). If you change these CSV file names, please also remember to change them in every R script.
-4. Run R scripts.  
-   - plot_health_artery.R:  
-  normative models of arterial volumes for healthy subjects regarding to the whole brain and the four typical regions of the brain (ACR, PCR, MCR, CoWR);
-   - plot_health_brodmann_artery.R:  
-  normative models of arterial volumes for healthy subjects regarding to Brodmann areas;
-   - plot_health_cortex.R:  
-  normative models of cortical volumes for healthy subjects regarding to the whole brain and the four typical regions of the brain; 
-   - plot_health_brodmann_cortex.R:  
-  normative models of cortical volumes for healthy subjects regarding to Brodmann areas;
-   - plot_health_vs_unhealth_artery.R: 
-  comparison between normative models of arterial volumes for healthy subjects and for AD subjects;
-   - plot_health_vs_unhealth_cortex.R:  
-  comparison between normative models of cortical volumes for healthy subjects and for AD subjects.
+2. (Optional) Default CSV files of arterial and cortical volumes are listed [here](./data/README.md). If you change these CSV file names, please also remember to change them in every python notebook.
+4. Run python notebooks step by step
+   - AV_health_curve.ipynb:  
+  normative models of arterial volumes for UK healthy subjects and CN healthy subjects regarding to the whole brain, the four typical regions and the brodmann regions;
+   - CV_health_curve.ipynb:  
+  normative models of cortical volumes for UK healthy subjects and CN healthy subjects regarding to the whole brain, the four typical regions and the brodmann regions;
+   - AV_health_vs_unhealth_curve.ipynb:  
+  comparison between normative models of arterial volumes for healthy subjects and pathological subjects (AD, large territorial stroke, lacunar stroke); 
+   - CV_health_vs_unhealth_curve.ipynb:  
+  comparison between normative models of cortical volumes for healthy subjects and pathological subjects (AD, large territorial stroke, lacunar stroke).
