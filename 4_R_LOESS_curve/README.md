@@ -1,5 +1,5 @@
 # Step 4: Normative models of arterial and cortical volumes
-We compute locally estimated scatterplot smoothing (LOESS) in R to obtain normative models of arterial and cortical volumes of healthy subjects and subjects of diseases.
+We compute locally estimated scatterplot smoothing (LOESS) to obtain normative models of arterial and cortical volumes of healthy subjects and subjects of diseases.
 
 ## System requirements
 ### Operating System
@@ -15,11 +15,11 @@ CPU with 4 cores and 8GB RAM are enough.
 3. Install required libraries:
    ```
      cd Path_you_save/4_R_LOESS_curve
-     pip install requirements.txt
+     pip install -r requirements.txt
 	```
    
 ## How to run it? 
-Following previous Steps 1-3, you can extract hierarchical arterial and cortical volumes by yourself using your own dataset. Then you can run our R scripts to get the normative models of your data by following the below instruction. We also provide CSV files containing arterial and cortical volume features from healthy and AD subjects in the [data folder](./data/), which you can use to reproduce normative models of our dataset or test.  
+Following previous Steps 1-3, you can extract hierarchical arterial and cortical volumes by yourself using your own dataset. Then you can run our python notebooks to get the normative models of your data by following the below instruction. We also provide CSV files containing arterial and cortical volume features from healthy and pathological subjects in the [data folder](./data/), which you can use to reproduce normative models of our dataset or test.  
 1. Check if hierarchical arterial and cortical volumes of each individual are saved in CSV files in the folder 
    PATH_you_save/4_R_LOESS_curve/data;
 2. In every R script, set the variable `dir_` as PATH_you_save/4_R_LOESS_curve;
