@@ -7,8 +7,8 @@ Here we include CSV files recording hierarchical arterial and cortical volumes o
 * CN_cortical_volume.csv: hierarchical cortical volumes were recorded for CN healthy subjects;
 * AD_chinese_vascular_volume.csv: hierarchical arterial volumes were recorded for CN AD subjects;
 * AD_chinese_cortical_volume.csv: hierarchical cortical volumes were recorded for CN AD subjects;
-* cortical-stroke_chinese_vascular_volume.csv: hierarchical arterial volumes were recorded for CN subjects with cortical stroke;
-* cortical-stroke_chinese_cortical_volume.csv: hierarchical cortical volumes were recorded for CN subjects with cortical stroke;
+* large-territorial-stroke_chinese_vascular_volume.csv: hierarchical arterial volumes were recorded for CN subjects with large territorial stroke;
+* large-territorial-stroke_chinese_cortical_volume.csv: hierarchical cortical volumes were recorded for CN subjects with large territorial stroke;
 * lacunar-stroke_chinese_vascular_volume.csv: hierarchical arterial volumes were recorded for CN subjects with lacunar stroke;
 * lacunar-stroke_chinese_cortical_volume.csv: hierarchical cortical volumes were recorded for CN subjects with lacunar stroke;
 * uk_vascular_volume_match.csv: hierarchical arterial volumes were recorded for UK healthy subjects (age-matched with CN subjects);
